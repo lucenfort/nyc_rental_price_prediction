@@ -1,0 +1,48 @@
+# Ambientes Virtuais
+.venv/
+venv/
+env/
+ENV/
+*.pyc
+*.pyo
+__pycache__/
+
+# Configurações Sensíveis
+*.env
+.env*
+secrets.json
+# config.yaml
+
+# Logs e Arquivos Temporários
+logs/
+*.log
+*.out
+*.err
+*.pid
+.DS_Store
+Thumbs.db
+
+# Dados Sensíveis e Modelos
+#data/raw/
+#data/processed/
+#data/external/
+#models/
+#reports/figures/
+
+# Arquivos de IDE e Ferramentas
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# Arquivos de Jupyter Notebook
+.ipynb_checkpoints/
+
+# Cache e Dependências
+*.cache
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Arquivos do Jupyter e Outros
+jupyter_notebook_config.py
