@@ -1,14 +1,4 @@
 #!/usr/bin/env python
-"""
-predict_price.py
-----------------
-Este módulo carrega o modelo treinado e o scaler, realiza a preparação dos dados de entrada
-seguindo o mesmo pipeline de engenharia de atributos, aplica a normalização e realiza a previsão do preço.
-A previsão é revertida da transformação logarítmica para sugerir o preço em dólares.
-
-Também inclui uma conversão de moeda para BRL (Real) e EUR (Euro) utilizando a API AwesomeAPI.
-"""
-
 import os
 import joblib
 import numpy as np
