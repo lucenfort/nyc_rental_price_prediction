@@ -1,18 +1,4 @@
 #!/usr/bin/env python
-"""
-model_training.py
------------------
-Este módulo realiza o treinamento e a otimização do modelo preditivo utilizando Random Forest.
-As etapas incluem:
-    - Carregamento dos dados finais (com features);
-    - Divisão dos dados em treino e teste (80%/20%);
-    - Treinamento do RandomForestRegressor com otimização de hiperparâmetros via GridSearchCV com validação cruzada;
-    - Avaliação do modelo no conjunto de teste;
-    - Salvamento do modelo final em formato .pkl;
-    - Salvamento dos melhores hiperparâmetros em arquivo JSON na pasta de relatórios;
-    - Geração de relatório TXT com o resumo do treinamento.
-"""
-
 import os
 import warnings
 import joblib
