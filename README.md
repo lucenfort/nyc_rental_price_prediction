@@ -26,7 +26,7 @@ nyc_rental_price_prediction/
 │── models/                   # Modelos treinados (.pkl)
 │── notebooks/                # Jupyter Notebooks com análises e treinamento
 │── reports/                  # Relatórios gerados durante as análises
-│── scr/                  # Scripts de pré-processamento e modelagem
+│── scr/                      # Scripts de pré-processamento e modelagem
 │── README.md                 # Documentação do projeto
 └── requirements.txt          # Pacotes e versões utilizadas
 ```
