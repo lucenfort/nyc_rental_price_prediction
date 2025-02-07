@@ -1,19 +1,4 @@
 #!/usr/bin/env python
-"""
-feature_engineering.py
------------------------
-Este módulo realiza a engenharia de atributos para o dataset de aluguéis.
-As etapas incluem:
-    - Criação de novas features (ex.: densidade de imóveis, proximidade do centro);
-    - Codificação de variáveis categóricas (apenas para colunas de baixa cardinalidade);
-    - Exclusão de colunas irrelevantes (incluindo 'nome', 'host_name', 'ultima_review', 'bairro', 'price', 'id' e 'host_id');
-    - Transformação da variável alvo para log (price_log);
-    - Normalização das variáveis numéricas;
-    - Salvamento do dataset com as novas features;
-    - Geração de relatório TXT com o resumo das operações;
-    - Salvamento do scaler utilizado para normalização.
-"""
-
 import os
 import numpy as np
 import pandas as pd
