@@ -14,8 +14,6 @@ As principais etapas do projeto incluem:
 ✅ **Treinamento e Avaliação do Modelo** 🤖  
 ✅ **Previsão** 💰  
 
-O modelo escolhido foi um **Random Forest Regressor**, pois demonstrou melhor desempenho na previsão de preços em relação a outros modelos testados.  
-
 ---  
 
 ## 📁 Estrutura do Repositório  
@@ -48,6 +46,7 @@ cd nyc_rental_price_prediction
 python -m venv venv
 source venv/bin/activate  # Para Linux/macOS
 venv\Scriptsctivate     # Para Windows
+
 ```  
 
 ### **3️⃣ Instalar as Dependências**  
