@@ -1,16 +1,4 @@
 #!/usr/bin/env python
-"""
-data_processing.py
-------------------
-Este módulo realiza o pré-processamento dos dados para a análise de precificação de aluguéis em Nova York.
-As etapas incluem:
-    - Carregamento dos dados brutos;
-    - Tratamento de valores ausentes;
-    - Remoção de outliers (parametrizada);
-    - Salvamento do dataset processado;
-    - Geração de relatório TXT com o resumo das operações.
-"""
-
 import os
 import pandas as pd
 import logging
