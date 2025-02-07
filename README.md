@@ -36,12 +36,14 @@ nyc_rental_price_prediction/
 ## 🚀 Como Executar o Projeto  
 
 ### **1️⃣ Clonar o Repositório**  
+
 ```bash
 git clone https://github.com/lucenfort/nyc_rental_price_prediction.git
 cd nyc_rental_price_prediction
 ```  
 
 ### **2️⃣ Criar e Ativar o Ambiente Virtual**  
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # Para Linux/macOS
@@ -49,11 +51,13 @@ venv\Scriptsctivate     # Para Windows
 ```  
 
 ### **3️⃣ Instalar as Dependências**  
+
 ```bash
 pip install -r requirements.txt
 ```  
 
 ### **4️⃣ Executar os Notebooks**  
+
 Os notebooks do projeto podem ser encontrados na pasta `/notebooks/` e devem ser executados na seguinte ordem:  
 
 1️⃣ **[EDA - Análise Exploratória](./notebooks/01_eda_notebook.ipynb)** 📊  
@@ -62,6 +66,7 @@ Os notebooks do projeto podem ser encontrados na pasta `/notebooks/` e devem ser
 4️⃣ **[Predição](./notebooks/04_prediction_notebook.ipynb)** 📈  
 
 Para abrir os notebooks, utilize:  
+
 ```bash
 jupyter notebook
 ```  
@@ -78,6 +83,7 @@ O modelo treinado foi um **Random Forest Regressor**, escolhido por suas vantage
 ✅ **Baixo risco de overfitting** (quando bem parametrizado)  
 
 Métrica de Avaliação:  
+
 | **Métrica** | **Valor** |
 |------------|----------|
 | ✅ **MAE**  | 0.2603 |
@@ -92,6 +98,7 @@ A previsão do preço do aluguel pode ser realizada com base nas característica
 Além disso, a conversão para **BRL (Reais) e EUR (Euros)** é feita utilizando a API **AwesomeAPI**.  
 
 Exemplo de um imóvel previsto:  
+
 ```python
 apartamento = {
     'bairro_group': 'Manhattan',
@@ -108,6 +115,7 @@ apartamento = {
 
 ✅ **Preço sugerido:** **$207.08 USD**  
 💰 **Conversões:**  
+
 - 🇧🇷 **R$ 1196,94 BRL**  
 - 💶 **€ 200,58 EUR**  
 
@@ -121,7 +129,7 @@ apartamento = {
 - 🛠️ **[Pré-Processamento e Feature Engineering](./docs/02_preprocessing.md)**  
 - 🤖 **[Treinamento do Modelo](./docs/03_train.md)**  
 - 📈 **[Resultados e Avaliação](./docs/04_results.md)**  
-- 🔍 **Modelo Treinado** **[(`random_forest.pkl`)](https://github.com/lucenfort/nyc_rental_price_prediction/raw/main/models/random_forest.pkl)**
+- 🔍 **Modelo Treinado** **[(`random_forest.pkl`)](https://drive.google.com/file/d/16oJUcoyqpTtQ1H3VfhtOa7Y7RoMz4tC2/view?usp=sharing)**
 
 - 📊 **Relatórios e Gráficos**  
 <!--
