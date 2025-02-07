@@ -146,6 +146,4 @@ Para atender aos requisitos, o projeto será disponibilizado em um **repositóri
 
 - O modelo de **Random Forest Regressor** mostrou **boa capacidade preditiva**, explicando **63,21% da variância dos preços**.  
 - A análise de preços indicou que **Manhattan** é a melhor região para investimento.  
-- A abordagem utilizada pode ser refinada com **novas features e otimização de hiperparâmetros**.  
-
-📌 *Este estudo demonstra como um modelo de Machine Learning pode ser utilizado para precificação inteligente de imóveis!* 🚀🏡  
+- A abordagem utilizada pode ser refinada com **novas features e otimização de hiperparâmetros**. 
