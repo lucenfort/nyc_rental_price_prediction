@@ -1,0 +1,71 @@
+RELATÓRIO DE ANÁLISE EXPLORATÓRIA DE DADOS (EDA)
+--------------------------------------------------
+
+1. Introdução
+Este relatório apresenta os dados extraídos da análise exploratória do dataset 'teste_indicium_precificacao.csv'.
+O dataset possui 48894 registros e 17 colunas.
+
+2. Estrutura dos Dados
+
+2.1 Informações Gerais:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 48894 entries, 0 to 48893
+Data columns (total 17 columns):
+ #   Column                         Non-Null Count  Dtype  
+---  ------                         --------------  -----  
+ 0   id                             48894 non-null  int64  
+ 1   nome                           48878 non-null  object 
+ 2   host_id                        48894 non-null  int64  
+ 3   host_name                      48873 non-null  object 
+ 4   bairro_group                   48894 non-null  object 
+ 5   bairro                         48894 non-null  object 
+ 6   latitude                       48894 non-null  float64
+ 7   longitude                      48894 non-null  float64
+ 8   room_type                      48894 non-null  object 
+ 9   price                          48894 non-null  int64  
+ 10  minimo_noites                  48894 non-null  int64  
+ 11  numero_de_reviews              48894 non-null  int64  
+ 12  ultima_review                  38842 non-null  object 
+ 13  reviews_por_mes                38842 non-null  float64
+ 14  calculado_host_listings_count  48894 non-null  int64  
+ 15  disponibilidade_365            48894 non-null  int64  
+ 16  price_log                      48894 non-null  float64
+dtypes: float64(4), int64(7), object(6)
+memory usage: 6.3+ MB
+
+
+2.2 Valores Ausentes:
+                       Coluna  Valores Ausentes
+                           id                 0
+                         nome                16
+                      host_id                 0
+                    host_name                21
+                 bairro_group                 0
+                       bairro                 0
+                     latitude                 0
+                    longitude                 0
+                    room_type                 0
+                        price                 0
+                minimo_noites                 0
+            numero_de_reviews                 0
+                ultima_review             10052
+              reviews_por_mes             10052
+calculado_host_listings_count                 0
+          disponibilidade_365                 0
+
+3. Estatísticas Descritivas:
+                  id            nome       host_id host_name bairro_group        bairro      latitude     longitude        room_type         price  minimo_noites  numero_de_reviews ultima_review  reviews_por_mes  calculado_host_listings_count  disponibilidade_365     price_log
+count   4.889400e+04           48878  4.889400e+04     48873        48894         48894  48894.000000  48894.000000            48894  48894.000000   48894.000000       48894.000000         38842     38842.000000                   48894.000000         48894.000000  48894.000000
+unique           NaN           47904           NaN     11452            5           221           NaN           NaN                3           NaN            NaN                NaN          1764              NaN                            NaN                  NaN           NaN
+top              NaN  Hillside Hotel           NaN   Michael    Manhattan  Williamsburg           NaN           NaN  Entire home/apt           NaN            NaN                NaN    2019-06-23              NaN                            NaN                  NaN           NaN
+freq             NaN              18           NaN       417        21661          3920           NaN           NaN            25409           NaN            NaN                NaN          1413              NaN                            NaN                  NaN           NaN
+mean    1.901753e+07             NaN  6.762139e+07       NaN          NaN           NaN     40.728951    -73.952169              NaN    152.720763       7.030085          23.274758           NaN         1.373251                       7.144005           112.776169      4.736879
+std     1.098288e+07             NaN  7.861118e+07       NaN          NaN           NaN      0.054529      0.046157              NaN    240.156625      20.510741          44.550991           NaN         1.680453                      32.952855           131.618692      0.695350
+min     2.595000e+03             NaN  2.438000e+03       NaN          NaN           NaN     40.499790    -74.244420              NaN      0.000000       1.000000           0.000000           NaN         0.010000                       1.000000             0.000000      0.000000
+25%     9.472371e+06             NaN  7.822737e+06       NaN          NaN           NaN     40.690100    -73.983070              NaN     69.000000       1.000000           1.000000           NaN         0.190000                       1.000000             0.000000      4.248495
+50%     1.967743e+07             NaN  3.079553e+07       NaN          NaN           NaN     40.723075    -73.955680              NaN    106.000000       3.000000           5.000000           NaN         0.720000                       1.000000            45.000000      4.672829
+75%     2.915225e+07             NaN  1.074344e+08       NaN          NaN           NaN     40.763117    -73.936273              NaN    175.000000       5.000000          24.000000           NaN         2.020000                       2.000000           227.000000      5.170484
+max     3.648724e+07             NaN  2.743213e+08       NaN          NaN           NaN     40.913060    -73.712990              NaN  10000.000000    1250.000000         629.000000           NaN        58.500000                     327.000000           365.000000      9.210440
+
+4. Gráficos Gerados
+Os gráficos foram salvos no diretório 'reports/eda/figures'.

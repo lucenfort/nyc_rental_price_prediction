@@ -1,67 +1,143 @@
-# 🧪 DS Project Template
+# 🏡 Previsão de Preços de Aluguel - Nova York  
 
-Um template estruturado para projetos de **Data Science** 🚀. Inclui organização modular, ambiente virtual, instalação de dependências e pipeline automatizado para processamento, modelagem e avaliação. Simplifique sua jornada na ciência de dados! 📊
+---  
 
-## 📁 Estrutura do Projeto
+## 📌 Sobre o Projeto  
 
-A organização do projeto segue boas práticas para facilitar a manutenção e escalabilidade:
+Este projeto tem como objetivo prever os preços de aluguéis em Nova York com base em um conjunto de dados de imóveis de Nova York.  
+Utilizando **Machine Learning**, realizamos uma análise exploratória, pré-processamento dos dados, engenharia de atributos, treinamento do modelo e avaliação de desempenho.  
 
-```
-📂 ds_project_template/
-├── 📂 data/               # Armazena os dados brutos e processados
-│   ├── raw/              # Dados originais
-│   ├── processed/        # Dados após pré-processamento
-│   ├── external/         # Dados externos ou suplementares
-├── 📂 notebooks/         # Notebooks Jupyter para análise exploratória
-├── 📂 src/               # Scripts para processamento, modelagem e avaliação
-│   ├── data_processing.py
-│   ├── feature_engineering.py
-│   ├── model_training.py
-│   ├── evaluation.py
-│   ├── utils.py
-├── 📂 models/            # Modelos treinados e checkpoints
-├── 📂 reports/           # Relatórios e gráficos gerados
-│   ├── figures/
-├── 📜 config.yaml        # Arquivo de configuração do projeto
-├── 📜 main.py            # Pipeline principal do projeto
-├── 📜 requirements.txt   # Lista de dependências
-├── 📜 .gitignore         # Arquivos a serem ignorados pelo Git
-├── 📜 README.md          # Documentação do projeto
-```
+As principais etapas do projeto incluem:  
 
-## 🚀 Configuração do Projeto
+✅ **Análise Exploratória dos Dados (EDA)** 📊  
+✅ **Pré-processamento e Engenharia de Atributos** 🛠️  
+✅ **Treinamento e Avaliação do Modelo** 🤖  
+✅ **Previsão** 💰  
 
-### 1️⃣ Criar o Ambiente Virtual
+O modelo escolhido foi um **Random Forest Regressor**, pois demonstrou melhor desempenho na previsão de preços em relação a outros modelos testados.  
+
+---  
+
+## 📁 Estrutura do Repositório  
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+nyc_rental_price_prediction/
+│── data/                     # Conjunto de dados (bruto, processado e final)
+│── models/                   # Modelos treinados (.pkl)
+│── notebooks/                # Jupyter Notebooks com análises e treinamento
+│── reports/                  # Relatórios gerados durante as análises
+│── scr/                  # Scripts de pré-processamento e modelagem
+│── README.md                 # Documentação do projeto
+└── requirements.txt          # Pacotes e versões utilizadas
 ```
 
-### 2️⃣ Instalar Dependências
+---  
+
+## 🚀 Como Executar o Projeto  
+
+### **1️⃣ Clonar o Repositório**  
+
+```bash
+git clone https://github.com/lucenfort/nyc_rental_price_prediction.git
+cd nyc_rental_price_prediction
+```  
+
+### **2️⃣ Criar e Ativar o Ambiente Virtual**  
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Para Linux/macOS
+venv\Scriptsctivate     # Para Windows
+```  
+
+### **3️⃣ Instalar as Dependências**  
 
 ```bash
 pip install -r requirements.txt
-```
+```  
 
-### 3️⃣ Executar o Pipeline Principal
+### **4️⃣ Executar os Notebooks**  
 
-```bash
-python main.py
-```
+Os notebooks do projeto podem ser encontrados na pasta `/notebooks/` e devem ser executados na seguinte ordem:  
 
-### 4️⃣ Iniciar Jupyter Notebook (Opcional)
+1️⃣ **[EDA - Análise Exploratória](./notebooks/01_eda_notebook.ipynb)** 📊  
+2️⃣ **[Pré-Processamento e Feature Engineering](./notebooks/02_processing_notebook.ipynb)** 🛠️  
+3️⃣ **[Treinamento e Validação](./notebooks/03_training_notebook.ipynb)** 🤖  
+4️⃣ **[Predição](./notebooks/04_prediction_notebook.ipynb)** 📈  
+
+Para abrir os notebooks, utilize:  
 
 ```bash
 jupyter notebook
-```
+```  
 
-## 📊 Relatórios e Resultados
+---  
 
-Os relatórios de análise exploratória e modelagem são armazenados no diretório `reports/`. Gráficos, métricas de desempenho e insights podem ser encontrados na subpasta `figures/`.
+## 🔍 Modelo Utilizado  
 
-## 📜 Licença
+O modelo treinado foi um **Random Forest Regressor**, escolhido por suas vantagens:  
 
-Este projeto é distribuído sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+✅ **Captura relações não lineares nos dados**  
+✅ **Robusto a outliers**  
+✅ **Lida bem com múltiplas variáveis**  
+✅ **Baixo risco de overfitting** (quando bem parametrizado)  
 
----
+Métrica de Avaliação:  
+
+| **Métrica** | **Valor** |
+|------------|----------|
+| ✅ **MAE**  | 0.2603 |
+| ✅ **RMSE** | 0.3492 |
+| ✅ **R² Score** | 0.6321 |  
+
+---  
+
+## 📌 Previsão do Preço e Conversão de Moeda  
+
+A previsão do preço do aluguel pode ser realizada com base nas características do imóvel.  
+Além disso, a conversão para **BRL (Reais) e EUR (Euros)** é feita utilizando a API **AwesomeAPI**.  
+
+Exemplo de um imóvel previsto:  
+
+```python
+apartamento = {
+    'bairro_group': 'Manhattan',
+    'latitude': 40.75362,
+    'longitude': -73.98377,
+    'room_type': 'Entire home/apt',
+    'minimo_noites': 1,
+    'numero_de_reviews': 45,
+    'reviews_por_mes': 0.38,
+    'calculado_host_listings_count': 2,
+    'disponibilidade_365': 355
+}
+```  
+
+✅ **Preço sugerido:** **$207.08 USD**  
+💰 **Conversões:**  
+
+- 🇧🇷 **R$ 1196,94 BRL**  
+- 💶 **€ 200,58 EUR**  
+
+---  
+
+## 📂 Entrega do Projeto  
+
+📦 **Arquivos entregues neste repositório:**  
+
+- 📜 **[EDA - Análise Exploratória](./docs/01_eda.md)**  
+- 🛠️ **[Pré-Processamento e Feature Engineering](./docs/02_preprocessing.md)**  
+- 🤖 **[Treinamento do Modelo](./docs/03_train.md)**  
+- 📈 **[Resultados e Avaliação](./docs/04_results.md)**  
+- 🔍 **Modelo Treinado** **[(`random_forest.pkl`)](https://drive.google.com/file/d/16oJUcoyqpTtQ1H3VfhtOa7Y7RoMz4tC2/view?usp=sharing)**
+
+- 📊 **Relatórios e Gráficos**  
+<!--
+📹 **Vídeo Explicativo** será disponibilizado via Google Drive com acesso liberado para visualização.  
+-->
+
+---  
+
+🚀 Este projeto demonstrou a viabilidade do uso de **Machine Learning** para prever preços de aluguéis com base em dados históricos.  
+
+✍️ *Projeto desenvolvido por Luciano Arruda - 2025*  

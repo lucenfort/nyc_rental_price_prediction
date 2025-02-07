@@ -1,0 +1,18 @@
+RELATÓRIO DE AVALIAÇÃO DO MODELO
+---------------------------------
+
+Métricas de Desempenho:
+MAE: 0.2603
+RMSE: 0.3492
+R²: 0.6321
+
+Melhores Hiperparâmetros:
+ - max_depth: 20
+ - min_samples_leaf: 2
+ - min_samples_split: 10
+ - n_estimators: 200
+
+Caminhos dos Gráficos Gerados:
+ - residuos_hist: reports/figures/residuos_distribuicao.png
+ - real_vs_previsto: reports/figures/real_vs_previsto.png
+ - residuos_vs_previsto: reports/figures/residuos_vs_previsto.png

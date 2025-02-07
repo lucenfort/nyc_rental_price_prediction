@@ -46,3 +46,4 @@ pip-delete-this-directory.txt
 
 # Arquivos do Jupyter e Outros
 jupyter_notebook_config.py
+models/random_forest.pkl
