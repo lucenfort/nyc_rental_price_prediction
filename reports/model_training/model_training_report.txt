@@ -1,0 +1,11 @@
+RELATÓRIO DE TREINAMENTO DO MODELO
+-----------------------------------
+Melhores hiperparâmetros encontrados:
+ - max_depth: 20
+ - min_samples_leaf: 2
+ - min_samples_split: 10
+ - n_estimators: 200
+
+Avaliação no conjunto de teste:
+ - RMSE: 0.3492
+ - R2: 0.6321
