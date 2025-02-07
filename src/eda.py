@@ -1,19 +1,3 @@
-"""
-eda.py
-------
-Este módulo realiza a Análise Exploratória de Dados (EDA) para o dataset de precificação de aluguéis em Nova York.
-A análise contempla:
-    - Carregamento do dataset;
-    - Exibição de informações gerais e resumo estatístico;
-    - Verificação e exibição de valores ausentes;
-    - Geração de gráficos (histogramas, boxplots, gráficos de barras, scatter plot geográfico, heatmap de correlação e distribuição do target antes e após transformação);
-    - Geração de um relatório completo em formato TXT com os dados extraídos da EDA;
-    - Salvamento dos gráficos no diretório 'reports/eda/figures' e do relatório em 'reports/eda/relatorios'.
-
-Observação:
-    Certifique-se de que o arquivo 'teste_indicium_precificacao.csv' esteja localizado em 'data/raw/'.
-"""
-
 import os
 import warnings
 from io import StringIO
