@@ -1,17 +1,4 @@
 #!/usr/bin/env python
-"""
-evaluation.py
--------------
-Este módulo realiza a avaliação do modelo treinado.
-As etapas incluem:
-    - Carregamento dos dados finais (com features) e divisão em treino/teste;
-    - Carregamento do modelo salvo;
-    - Previsão no conjunto de teste;
-    - Cálculo das métricas de desempenho: MAE, RMSE e R²;
-    - Geração de gráficos (distribuição dos resíduos, scatter plot de valores reais vs. previstos e resíduos vs. previstos);
-    - Geração e salvamento de um relatório de avaliação.
-"""
-
 import os
 import warnings
 import joblib
