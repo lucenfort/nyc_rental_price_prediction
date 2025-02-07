@@ -1,17 +1,4 @@
-"""
-main.py
--------
-Este script orquestra a execução de todas as etapas do pipeline:
-  1. EDA
-  2. Processamento de Dados
-  3. Engenharia de Atributos
-  4. Treinamento dos Modelos
-  5. Avaliação do Modelo
-
-Cada módulo é executado de forma ordenada utilizando o interpretador Python.
-Caso alguma etapa apresente erro, o pipeline será interrompido para facilitar a depuração.
-"""
-
+#!/usr/bin/env python
 import os
 import subprocess
 import sys
