@@ -136,5 +136,3 @@ apartamento = {
 -->
 
 ---  
-
-🚀 Este projeto demonstrou a viabilidade do uso de **Machine Learning** para prever preços de aluguéis com base em dados históricos.  
