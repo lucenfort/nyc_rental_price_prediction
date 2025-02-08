@@ -45,7 +45,7 @@ cd nyc_rental_price_prediction
 ```bash
 python -m venv venv
 source venv/bin/activate  # Para Linux/macOS
-venv\Scripts\activate     # Para Windows
+venv\Scripts\activate     # Para Windows
 
 ```  
 
